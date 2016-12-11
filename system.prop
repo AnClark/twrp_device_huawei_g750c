@@ -90,5 +90,6 @@ ro.qc.sensors.step_counter=true
 # Wifi
 wifi.interface=wlan0
 
-#Maintainer
-ro.mk.maintainer=xjljian
+romjd.rom.id=2879dd50-9b3c-4b88-9f86-8aed90efaa11
+romjd.rom.version=1.1.0
+romjd.rom.version.code=1
