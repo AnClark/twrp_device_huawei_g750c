@@ -16,16 +16,17 @@
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-$(call inherit-product, device/huawei/g750c/full_g750c.mk)
-
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/g750c/g750c.mk)
 
+PRODUCT_NAME := mk_g750c
 PRODUCT_DEVICE := g750c
-PRODUCT_NAME := cm_g750c
+PRODUCT_BRAND := huawei
+PRODUCT_MANUFACTURER := Huawei
+PRODUCT_MODEL := HUAWEI B199
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_NAME=B199 \
