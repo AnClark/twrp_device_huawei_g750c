@@ -1,1 +1,2 @@
+type wpa;
 allow wpa bluetooth_device:chr_file { open read };
