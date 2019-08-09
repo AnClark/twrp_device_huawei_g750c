@@ -17,6 +17,7 @@
 #define LOG_TAG "libbtaddr"
 
 #include <ctype.h>
+#include <android/log.h>
 #include <cutils/log.h>
 #include <cutils/properties.h>
 #include <stdio.h>

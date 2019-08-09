@@ -17,7 +17,8 @@ include $(CLEAR_VARS)
 
 LOCAL_SHARED_LIBRARIES := \
     libc \
-    libcutils
+    libcutils \
+    liblog
 
 LOCAL_SRC_FILES := \
     btaddr.c
