@@ -23,6 +23,13 @@ LOCAL_C_INCLUDES := system/core/init
 LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
 LOCAL_SRC_FILES := init_g750c.cpp
 LOCAL_MODULE := libinit_g750c
+
+LOCAL_STATIC_LIBRARIES += \
+    libselinux
+
+LOCAL_C_INCLUDES += \
+    system/core/base/include/
+
 include $(BUILD_STATIC_LIBRARY)
 
 endif
