@@ -1,7 +1,0 @@
-#============= sensors ==============
-allow sensors apk_data_file:dir write;
-allow sensors apk_data_file:dir add_name;
-allow sensors apk_data_file:sock_file create;
-allow sensors apk_data_file:dir remove_name;
-allow sensors apk_data_file:sock_file setattr;
-allow sensors apk_data_file:sock_file write;

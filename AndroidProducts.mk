@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mk_g750c.mk
+    $(LOCAL_DIR)/omni_g750c.mk

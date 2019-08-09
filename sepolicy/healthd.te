@@ -1,3 +1,5 @@
+type sysfs_battery_supply;
+
 # chargeled
 recovery_only(`
   allow healthd sysfs_battery_supply:file getattr;

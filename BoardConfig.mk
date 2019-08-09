@@ -30,20 +30,6 @@ TARGET_CPU_VARIANT := krait
 TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
 MALLOC_SVELTE := true
 
-# Audio
-BOARD_USES_ALSA_AUDIO := true
-COMMON_GLOBAL_CFLAGS += -DHUAWEI_SOUND_PARAM_PATH=\"/system/etc/sound_param/g750c\" -DCAMERA_VENDOR_L_COMPAT
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
-AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-USE_CUSTOM_AUDIO_POLICY := 1
-
-# Bluetooth
-BLUETOOTH_HCI_USE_MCT := true
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/g750c/bluetooth
-
 # Board
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := msm8226
@@ -82,9 +68,6 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_g750c
-
 # Kernel
 BOARD_KERNEL_BASE := 0x0
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
@@ -120,7 +103,7 @@ TARGET_RIL_VARIANT := caf
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
+-include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/huawei/g750c/sepolicy
 
 # Vold
@@ -143,3 +126,21 @@ WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # inherit from the proprietary version
 -include vendor/huawei/g750c/BoardConfigVendor.mk
+
+# TWRP
+HAVE_SELINUX := true
+TW_MAX_BRIGHTNESS := 255
+DEVICE_RESOLUTION := 720x1280
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_FLASH_FROM_STORAGE := true
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_DEFAULT_EXTERNAL_STORAGE := true
+#TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/bq_bci_battery.1/power_supply/Battery"
+#TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+
+# Debug: Enable logcat support
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+

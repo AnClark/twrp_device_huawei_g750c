@@ -20,13 +20,13 @@ TARGET_SCREEN_WIDTH := 720
 # This can prevent profman error while building boot image preferences.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/mk/config/common_full_phone.mk)
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/phone-xxhdpi-4096-dalvik-heap.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/g750c/g750c.mk)
 
-PRODUCT_NAME := mk_g750c
+PRODUCT_NAME := omni_g750c
 PRODUCT_DEVICE := g750c
 PRODUCT_BRAND := huawei
 PRODUCT_MANUFACTURER := Huawei
