@@ -68,6 +68,10 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_g750c
+TARGET_RECOVERY_DEVICE_MODULES := libinit_g750c
+
 # Kernel
 BOARD_KERNEL_BASE := 0x0
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 androidboot.selinux=permissive
